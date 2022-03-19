@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const db = require('../models');
 const bcrypt = require('bcrypt');
-const { resolveShowConfigPath } = require('@babel/core/lib/config/files');
+//const { resolveShowConfigPath } = require('@babel/core/lib/config/files');
 
 const {User} = db;
 
@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
 })
 
 router.get('/profile', async (req, res) => {
-    req.currentUser ? res.json(req.currentUser) : res.json(null)
+    res.json(req.currentUser)
 })
 
 module.exports = router;

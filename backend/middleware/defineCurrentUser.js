@@ -9,7 +9,7 @@ const defineCurrentUser = async (req, res, next) => {
                 userId: req.session.userId
             }
         })
-        req.defineCurrentUser = user;
+        req.currentUser = user;
         next();
     } catch {
         next();

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import { useHistory } from "react-router"
 
 function NewPlaceForm() {
@@ -18,6 +18,7 @@ function NewPlaceForm() {
 
 		await fetch(`http://localhost:4321/places`, {
 			method: 'POST',
+			credentials: 'include',
 			headers: {
 				'Content-Type': 'application/json'
 			},

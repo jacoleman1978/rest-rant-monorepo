@@ -10,7 +10,8 @@ function LoginForm() {
 
     const [credentials, setCredentials] = useState({
         email: '',
-        password: ''
+        password: '',
+        role: ''
     })
 
     const [errorMessage, setErrorMessage] = useState(null)
